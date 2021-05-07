@@ -70,7 +70,7 @@
         readAsString: {
             value: function (encoding) {
                 encoding = encoding || 'utf-8';
-                if (global.TextDecoder) {
+                if (window.global.TextDecoder) {
                     var decoder = new TextDecoder(encoding);
                     return decoder.decode(this.buffer);
                 } else {
